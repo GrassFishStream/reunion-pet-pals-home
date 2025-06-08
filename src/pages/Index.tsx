@@ -43,7 +43,7 @@ const Index = () => {
                 <div className="relative inline-block">
                   <span className="relative">
                     <span className="relative z-10">P</span>
-                    <House className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 text-blue-600 z-20" />
+                    <House className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 text-blue-600 z-20" />
                   </span>
                   et
                 </div>
