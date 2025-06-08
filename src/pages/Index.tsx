@@ -1,10 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Star, Heart, Shield, Clock, MapPin, Phone, Mail } from "lucide-react";
+import { Star, Heart, Shield, Clock, MapPin, Phone, Mail, House } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -38,9 +37,22 @@ const Index = () => {
           <Badge className="mb-4 bg-green-100 text-green-800 hover:bg-green-200">
             Serving Reunion, Colorado & Surrounding Areas
           </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
-            Your Pet's Home Away From Home
-          </h1>
+          <div className="relative inline-block mb-6 animate-fade-in">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+              <div className="flex flex-col items-center">
+                <div className="relative inline-block">
+                  <span className="relative">
+                    <span className="relative z-10">P</span>
+                    <House className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 text-blue-600 z-20" />
+                  </span>
+                  et
+                </div>
+                <div className="text-4xl md:text-5xl mt-2">
+                  Sitters
+                </div>
+              </div>
+            </h1>
+          </div>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-fade-in">
             Professional, loving pet care in the comfort of your own home. We treat your furry family members like our own while you're away.
           </p>
