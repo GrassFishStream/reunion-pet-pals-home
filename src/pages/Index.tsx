@@ -1,11 +1,16 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Star, Heart, Shield, Clock, MapPin, Phone, Mail, House } from "lucide-react";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Star, Heart, Shield, Clock, MapPin, Phone, Mail, House, CalendarIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { format } from "date-fns";
+import { cn } from "@/lib/utils";
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -14,12 +19,15 @@ const Index = () => {
     phone: "",
     petType: "",
     message: "",
+    time: "",
   });
+  const [date, setDate] = useState<Date>();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thank you! We'll contact you within 24 hours to discuss your pet care needs.");
-    setFormData({ name: "", email: "", phone: "", petType: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", petType: "", message: "", time: "" });
+    setDate(undefined);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -312,6 +320,38 @@ const Index = () => {
                     onChange={handleInputChange}
                     required
                   />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          className={cn(
+                            "w-full justify-start text-left font-normal",
+                            !date && "text-muted-foreground"
+                          )}
+                        >
+                          <CalendarIcon className="mr-2 h-4 w-4" />
+                          {date ? format(date, "PPP") : <span>Pick a date</span>}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={date}
+                          onSelect={setDate}
+                          initialFocus
+                          className="p-3 pointer-events-auto"
+                        />
+                      </PopoverContent>
+                    </Popover>
+                    <Input
+                      type="time"
+                      placeholder="Preferred Time"
+                      name="time"
+                      value={formData.time}
+                      onChange={handleInputChange}
+                    />
+                  </div>
                   <Textarea
                     placeholder="Tell us about your pet care needs..."
                     name="message"
