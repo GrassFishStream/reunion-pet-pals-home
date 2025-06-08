@@ -38,16 +38,16 @@ const Index = () => {
             Serving Reunion, Colorado & Surrounding Areas
           </Badge>
           <div className="relative inline-block mb-6 animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-              <div className="flex flex-col items-center">
+            <h1 className="text-6xl md:text-8xl font-bold text-gray-900 leading-tight">
+              <div className="flex flex-col items-start">
                 <div className="relative inline-block">
                   <span className="relative">
                     <span className="relative z-10">P</span>
-                    <House className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 text-blue-600 z-20" />
+                    <House className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 text-blue-600 z-20" />
                   </span>
                   et
                 </div>
-                <div className="text-4xl md:text-5xl mt-2">
+                <div className="text-5xl md:text-7xl mt-2 ml-8">
                   Sitters
                 </div>
               </div>
