@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -127,6 +126,71 @@ const Index = () => {
                 <CardDescription className="text-center">
                   24/7 availability for urgent situations and immediate veterinary coordination.
                 </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Workers Section */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Pet Care Team</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Experienced, passionate professionals dedicated to providing the best care for your furry family members
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="hover:shadow-lg transition-shadow duration-300 hover-scale">
+              <CardContent className="pt-6 text-center">
+                <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=96&h=96&fit=crop&crop=face" 
+                    alt="Sarah - Pet Care Specialist" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Sarah Johnson</h3>
+                <p className="text-blue-600 font-medium mb-3">Senior Pet Care Specialist</p>
+                <p className="text-gray-600 text-sm">
+                  8+ years experience with dogs and cats. Certified in pet first aid and specialized in senior pet care.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow duration-300 hover-scale">
+              <CardContent className="pt-6 text-center">
+                <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=96&h=96&fit=crop&crop=face" 
+                    alt="Mike - Dog Walking Expert" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Mike Rodriguez</h3>
+                <p className="text-green-600 font-medium mb-3">Dog Walking Expert</p>
+                <p className="text-gray-600 text-sm">
+                  Professional dog trainer and walker. Specializes in high-energy breeds and behavioral training.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow duration-300 hover-scale">
+              <CardContent className="pt-6 text-center">
+                <div className="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=96&h=96&fit=crop&crop=face" 
+                    alt="Emma - Overnight Care Specialist" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Emma Davis</h3>
+                <p className="text-yellow-600 font-medium mb-3">Overnight Care Specialist</p>
+                <p className="text-gray-600 text-sm">
+                  Veterinary technician background. Expert in medication administration and emergency pet care.
+                </p>
               </CardContent>
             </Card>
           </div>
