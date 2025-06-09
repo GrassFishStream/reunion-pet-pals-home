@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -62,7 +61,7 @@ const Index = () => {
             </h1>
           </div>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-fade-in">
-            Professional, loving pet care in the comfort of your own home. We treat your furry family members like our own while you're away.
+            Professional, loving pet care in the comfort of your own home. We treat your scaled, feathered, or fluffy family members like our own while you're away.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
@@ -139,7 +138,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Pet Care Team</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Experienced, passionate professionals dedicated to providing the best care for your furry family members
+              Experienced, passionate professionals dedicated to providing the best care for your scaled, feathered, or fluffy family members
             </p>
           </div>
           
