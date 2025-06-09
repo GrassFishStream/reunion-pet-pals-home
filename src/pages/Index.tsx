@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -6,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Star, Heart, Shield, Clock, MapPin, Phone, Mail, House, CalendarIcon } from "lucide-react";
+import { Star, Heart, Shield, Clock, MapPin, Phone, Mail, CalendarIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { format } from "date-fns";
@@ -48,12 +47,11 @@ const Index = () => {
           <div className="relative inline-block mb-6 animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-bold text-gray-900 leading-tight">
               <div className="flex flex-col items-start">
-                <div className="relative inline-block">
-                  <span className="relative">
-                    <span className="relative z-10">P</span>
-                    <House className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 text-blue-600 z-20" />
-                  </span>
-                  et
+                <div className="text-4xl md:text-6xl mb-2">
+                  Reunion
+                </div>
+                <div className="text-6xl md:text-8xl">
+                  Pet
                 </div>
                 <div className="text-5xl md:text-7xl mt-2 ml-8">
                   Sitters
