@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -242,12 +241,6 @@ const Index = () => {
                 With over 8 years of experience caring for pets in the Reunion area, we understand the unique needs of Colorado pets and their families. Our bonded and insured team provides personalized care that keeps your pets happy and healthy.
               </p>
               <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <Shield className="w-4 h-4 text-green-600" />
-                  </div>
-                  <span className="text-gray-700">Fully Licensed & Insured</span>
-                </div>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                     <Star className="w-4 h-4 text-blue-600" />
