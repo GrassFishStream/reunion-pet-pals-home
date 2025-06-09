@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -315,7 +316,7 @@ const Index = () => {
                     <Mail className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">hello@reunionpetcare.com</div>
+                    <div className="font-semibold text-gray-900">reunionpetcare@gmail.com</div>
                     <div className="text-gray-600">Quick response guaranteed</div>
                   </div>
                 </div>
