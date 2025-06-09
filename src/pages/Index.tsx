@@ -1,5 +1,4 @@
 
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -12,8 +11,11 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
+import CommentForm from "@/components/CommentForm";
 
 const Index = () => {
+  const [showCommentForm, setShowCommentForm] = useState(false);
+  const [userComments, setUserComments] = useState<any[]>([]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,9 +28,18 @@ const Index = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you! We'll contact you within 24 hours to discuss your pet care needs.");
+    setShowCommentForm(true);
+  };
+
+  const handleCommentSubmit = (comment: any) => {
+    setUserComments([...userComments, comment]);
+    setShowCommentForm(false);
     setFormData({ name: "", email: "", phone: "", petType: "", message: "", time: "" });
     setDate(undefined);
+  };
+
+  const handleBackToHome = () => {
+    setShowCommentForm(false);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -37,6 +48,35 @@ const Index = () => {
       [e.target.name]: e.target.value,
     });
   };
+
+  if (showCommentForm) {
+    return <CommentForm onSubmitComment={handleCommentSubmit} onBack={handleBackToHome} />;
+  }
+
+  // Static testimonials
+  const staticTestimonials = [
+    {
+      rating: 5,
+      comment: "Sarah took amazing care of our two cats while we were on vacation. Daily updates and photos gave us such peace of mind!",
+      name: "Jennifer & Mike",
+      location: "Reunion, CO"
+    },
+    {
+      rating: 5,
+      comment: "Our dog Max loves his visits with the team. They're so reliable and caring - we couldn't ask for better pet sitters!",
+      name: "The Rodriguez Family",
+      location: "Commerce City, CO"
+    },
+    {
+      rating: 5,
+      comment: "Professional, punctual, and genuinely care about our pets. We've used them for over a year and couldn't be happier!",
+      name: "David & Lisa",
+      location: "Brighton, CO"
+    }
+  ];
+
+  // Combine static and user testimonials
+  const allTestimonials = [...staticTestimonials, ...userComments];
 
   return (
     <div className="min-h-screen bg-background">
@@ -238,50 +278,22 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4">
-                  "Sarah took amazing care of our two cats while we were on vacation. Daily updates and photos gave us such peace of mind!"
-                </p>
-                <div className="font-semibold text-gray-900">- Jennifer & Mike</div>
-                <div className="text-sm text-gray-500">Reunion, CO</div>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4">
-                  "Our dog Max loves his visits with the team. They're so reliable and caring - we couldn't ask for better pet sitters!"
-                </p>
-                <div className="font-semibold text-gray-900">- The Rodriguez Family</div>
-                <div className="text-sm text-gray-500">Commerce City, CO</div>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4">
-                  "Professional, punctual, and genuinely care about our pets. We've used them for over a year and couldn't be happier!"
-                </p>
-                <div className="font-semibold text-gray-900">- David & Lisa</div>
-                <div className="text-sm text-gray-500">Brighton, CO</div>
-              </CardContent>
-            </Card>
+            {allTestimonials.map((testimonial, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="pt-6">
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    "{testimonial.comment}"
+                  </p>
+                  <div className="font-semibold text-gray-900">- {testimonial.name}</div>
+                  <div className="text-sm text-gray-500">{testimonial.location}</div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -441,4 +453,3 @@ const Index = () => {
 };
 
 export default Index;
-
