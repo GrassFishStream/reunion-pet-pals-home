@@ -93,7 +93,7 @@ const Index = () => {
       <section className="relative bg-gradient-to-br from-blue-50 to-green-50 py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <Badge className="mb-4 bg-green-100 text-green-800 hover:bg-green-200">
-            Serving Reunion, Colorado & Surrounding Areas
+            Serving Reunion, Colorado
           </Badge>
           <div className="relative inline-block mb-6 animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-bold text-gray-900 leading-tight">
@@ -205,7 +205,7 @@ const Index = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Caroline Clark</h3>
                 <p className="text-blue-600 font-medium mb-3">Senior Pet Care Specialist</p>
                 <p className="text-gray-600 text-sm">
-                  8+ years experience with reptiles and amphibians. Certified in pet first aid and specialized in senior pet care. No Bugs.
+                  3+ years experience with reptiles and amphibians. Certified in pet first aid and specialized in senior pet care. No Bugs.
                 </p>
               </CardContent>
             </Card>
