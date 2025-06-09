@@ -142,7 +142,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="hover:shadow-lg transition-shadow duration-300 hover-scale">
               <CardContent className="pt-6 text-center">
                 <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
@@ -173,23 +173,6 @@ const Index = () => {
                 <p className="text-green-600 font-medium mb-3">Dog Walking Expert</p>
                 <p className="text-gray-600 text-sm">
                   Professional dog trainer and walker. Specializes in high-energy breeds and behavioral training.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow duration-300 hover-scale">
-              <CardContent className="pt-6 text-center">
-                <div className="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=96&h=96&fit=crop&crop=face" 
-                    alt="Emma - Overnight Care Specialist" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Emma Davis</h3>
-                <p className="text-yellow-600 font-medium mb-3">Overnight Care Specialist</p>
-                <p className="text-gray-600 text-sm">
-                  Veterinary technician background. Expert in medication administration and emergency pet care.
                 </p>
               </CardContent>
             </Card>
