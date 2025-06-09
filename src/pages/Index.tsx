@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -146,7 +147,7 @@ const Index = () => {
               <CardContent className="pt-6 text-center">
                 <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=96&h=96&fit=crop"
+                    src="https://images.unsplash.com/photo-1485833077593-4278bba3f11f?w=96&h=96&fit=crop"
                     alt="Caroline - Pet Care Specialist" 
                     className="w-full h-full object-cover"
                   />
@@ -164,11 +165,11 @@ const Index = () => {
                 <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=96&h=96&fit=crop&crop=face" 
-                    alt="Teagon - Dog Walking Expert" 
+                    alt="Teagan - Dog Walking Expert" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Teagon Cuffe</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Teagan Cuffe</h3>
                 <p className="text-green-600 font-medium mb-3">Dog Walking Expert</p>
                 <p className="text-gray-600 text-sm">
                   Professional dog trainer and walker. Specializes in high-energy breeds and behavioral training. No Reptiles.
