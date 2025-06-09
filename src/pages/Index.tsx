@@ -205,7 +205,7 @@ const Index = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Caroline Clark</h3>
                 <p className="text-blue-600 font-medium mb-3">Senior Pet Care Specialist</p>
                 <p className="text-gray-600 text-sm">
-                  3+ years experience with reptiles and amphibians. Certified in pet first aid and specialized in senior pet care. No Bugs.
+                  5+ years experience with reptiles and amphibians. Certified in pet first aid and specialized in senior pet care. No Bugs.
                 </p>
               </CardContent>
             </Card>
