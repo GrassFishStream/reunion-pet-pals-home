@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -148,11 +149,11 @@ const Index = () => {
                 <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=96&h=96&fit=crop&crop=face" 
-                    alt="Sarah - Pet Care Specialist" 
+                    alt="Caroline - Pet Care Specialist" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Sarah Johnson</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Caroline Clark</h3>
                 <p className="text-blue-600 font-medium mb-3">Senior Pet Care Specialist</p>
                 <p className="text-gray-600 text-sm">
                   8+ years experience with dogs and cats. Certified in pet first aid and specialized in senior pet care.
