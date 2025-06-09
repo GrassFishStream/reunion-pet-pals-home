@@ -1,5 +1,4 @@
 
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -7,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Star, Heart, Shield, Clock, MapPin, Mail, CalendarIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -24,6 +24,7 @@ const Index = () => {
     petType: "",
     message: "",
     time: "",
+    worker: "",
   });
   const [date, setDate] = useState<Date>();
 
@@ -35,7 +36,7 @@ const Index = () => {
   const handleCommentSubmit = (comment: any) => {
     setUserComments([...userComments, comment]);
     setShowCommentForm(false);
-    setFormData({ name: "", email: "", phone: "", petType: "", message: "", time: "" });
+    setFormData({ name: "", email: "", phone: "", petType: "", message: "", time: "", worker: "" });
     setDate(undefined);
   };
 
@@ -47,6 +48,13 @@ const Index = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleWorkerChange = (value: string) => {
+    setFormData({
+      ...formData,
+      worker: value,
     });
   };
 
@@ -371,6 +379,16 @@ const Index = () => {
                     onChange={handleInputChange}
                     required
                   />
+                  <Select value={formData.worker} onValueChange={handleWorkerChange}>
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Pick a worker" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="caroline">Caroline Clark - Reptiles & Amphibians Specialist</SelectItem>
+                      <SelectItem value="teagan">Teagan Cuffe - Dog Walking Expert</SelectItem>
+                      <SelectItem value="any">Any Available Worker</SelectItem>
+                    </SelectContent>
+                  </Select>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Popover>
                       <PopoverTrigger asChild>
@@ -444,4 +462,3 @@ const Index = () => {
 };
 
 export default Index;
-
