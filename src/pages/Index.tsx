@@ -168,8 +168,8 @@ const Index = () => {
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-200 to-green-200 rounded-2xl p-8 text-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=300&fit=crop" 
-                  alt="Happy orange cat being cared for" 
+                  src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=300&fit=crop" 
+                  alt="Person walking a happy dog" 
                   className="w-full h-64 object-cover rounded-xl mb-4"
                 />
                 <p className="text-gray-700 font-medium">
