@@ -61,39 +61,82 @@ const Index = () => {
     return <CommentForm onSubmitComment={handleCommentSubmit} onBack={handleBackToHome} />;
   }
 
-  // Real-sounding testimonials
-  const staticTestimonials = [
-    {
-      rating: 5,
-      comment: "Caroline has been watching our bearded dragon Zeus for 6 months now. She sends me pictures every visit and even noticed when he wasn't eating well one day. Found out he was about to shed! So grateful for her attention to detail.",
-      name: "Marcus & Sarah",
-      location: "Reunion, CO"
-    },
-    {
-      rating: 5,
-      comment: "We were nervous leaving our rescue pitbull Luna with anyone, but Teagan was amazing. Luna actually gets excited when she sees Teagan coming up the driveway now. The daily walk photos are the best part of my workday!",
-      name: "Jennifer Chen",
-      location: "Commerce City, CO"
-    },
-    {
-      rating: 5,
-      comment: "Our elderly cat Whiskers needs medication twice daily. Caroline never missed a dose and even helped us transition to a new prescription when our vet changed it. Professional and caring - exactly what we needed.",
-      name: "Robert & Linda Thompson",
-      location: "Brighton, CO"
-    },
-    {
-      rating: 4,
-      comment: "Great service overall! Teagan walked our golden retriever Max while we were out of town for a week. Only wish they offered overnight stays, but the twice-daily visits worked well. Max was happy and tired each day.",
-      name: "The Patel Family",
-      location: "Reunion, CO"
-    },
-    {
-      rating: 5,
-      comment: "I have three cats and they're all pretty particular about strangers. Caroline won them over by the second visit. She even learned each of their quirks - Tiger likes his food warmed up and Mittens only drinks from the bathroom faucet. Highly recommend!",
-      name: "Amanda Rodriguez",
-      location: "Thornton, CO"
-    }
+  // Multiple sets of testimonials that rotate every 24 hours
+  const testimonialsRotation = [
+    // Set 1
+    [
+      {
+        rating: 5,
+        comment: "Caroline has been watching our bearded dragon Zeus for 6 months now. She sends me pictures every visit and even noticed when he wasn't eating well one day. Found out he was about to shed! So grateful for her attention to detail.",
+        name: "Marcus & Sarah",
+        location: "Reunion, CO"
+      },
+      {
+        rating: 5,
+        comment: "We were nervous leaving our rescue pitbull Luna with anyone, but Teagan was amazing. Luna actually gets excited when she sees Teagan coming up the driveway now. The daily walk photos are the best part of my workday!",
+        name: "Jennifer Chen",
+        location: "Commerce City, CO"
+      },
+      {
+        rating: 5,
+        comment: "Our elderly cat Whiskers needs medication twice daily. Caroline never missed a dose and even helped us transition to a new prescription when our vet changed it. Professional and caring - exactly what we needed.",
+        name: "Robert & Linda Thompson",
+        location: "Brighton, CO"
+      }
+    ],
+    // Set 2
+    [
+      {
+        rating: 4,
+        comment: "Great service overall! Teagan walked our golden retriever Max while we were out of town for a week. Only wish they offered overnight stays, but the twice-daily visits worked well. Max was happy and tired each day.",
+        name: "The Patel Family",
+        location: "Reunion, CO"
+      },
+      {
+        rating: 5,
+        comment: "I have three cats and they're all pretty particular about strangers. Caroline won them over by the second visit. She even learned each of their quirks - Tiger likes his food warmed up and Mittens only drinks from the bathroom faucet. Highly recommend!",
+        name: "Amanda Rodriguez",
+        location: "Thornton, CO"
+      },
+      {
+        rating: 5,
+        comment: "Teagan has been walking our energetic border collie Bella for 8 months. Rain or shine, she's always there. Bella comes home tired and happy every single time. Worth every penny!",
+        name: "Kevin & Maria Santos",
+        location: "Commerce City, CO"
+      }
+    ],
+    // Set 3
+    [
+      {
+        rating: 5,
+        comment: "Caroline took incredible care of our gecko colony while we were away for two weeks. She followed our detailed feeding schedule perfectly and even caught a potential health issue early. Professional reptile care!",
+        name: "Dr. Emily Watson",
+        location: "Brighton, CO"
+      },
+      {
+        rating: 4,
+        comment: "Our senior dog Charlie has special needs, and Teagan handles everything with such patience. The medication reminders and gentle exercise routine have made such a difference in his quality of life.",
+        name: "Patricia Williams",
+        location: "Reunion, CO"
+      },
+      {
+        rating: 5,
+        comment: "We have two rabbits and a chinchilla - not the easiest pets to find care for! Caroline researched their specific needs and provided amazing care. The daily photos were adorable too.",
+        name: "Alex & Jordan Kim",
+        location: "Thornton, CO"
+      }
+    ]
   ];
+
+  // Calculate which set of testimonials to show based on current date
+  // This will rotate every 24 hours
+  const getCurrentTestimonialSet = () => {
+    const daysSinceEpoch = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+    const setIndex = daysSinceEpoch % testimonialsRotation.length;
+    return testimonialsRotation[setIndex];
+  };
+
+  const staticTestimonials = getCurrentTestimonialSet();
 
   // Combine static and user testimonials
   const allTestimonials = [...staticTestimonials, ...userComments];
