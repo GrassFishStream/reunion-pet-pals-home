@@ -315,7 +315,6 @@ const Index = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Serving Reunion, CO</div>
-                    <div className="text-gray-600">And surrounding communities</div>
                   </div>
                 </div>
               </div>
