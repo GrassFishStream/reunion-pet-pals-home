@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -62,25 +61,37 @@ const Index = () => {
     return <CommentForm onSubmitComment={handleCommentSubmit} onBack={handleBackToHome} />;
   }
 
-  // Static testimonials
+  // Real-sounding testimonials
   const staticTestimonials = [
     {
       rating: 5,
-      comment: "Sarah took amazing care of our two cats while we were on vacation. Daily updates and photos gave us such peace of mind!",
-      name: "Jennifer & Mike",
+      comment: "Caroline has been watching our bearded dragon Zeus for 6 months now. She sends me pictures every visit and even noticed when he wasn't eating well one day. Found out he was about to shed! So grateful for her attention to detail.",
+      name: "Marcus & Sarah",
       location: "Reunion, CO"
     },
     {
       rating: 5,
-      comment: "Our dog Max loves his visits with the team. They're so reliable and caring - we couldn't ask for better pet sitters!",
-      name: "The Rodriguez Family",
+      comment: "We were nervous leaving our rescue pitbull Luna with anyone, but Teagan was amazing. Luna actually gets excited when she sees Teagan coming up the driveway now. The daily walk photos are the best part of my workday!",
+      name: "Jennifer Chen",
       location: "Commerce City, CO"
     },
     {
       rating: 5,
-      comment: "Professional, punctual, and genuinely care about our pets. We've used them for over a year and couldn't be happier!",
-      name: "David & Lisa",
+      comment: "Our elderly cat Whiskers needs medication twice daily. Caroline never missed a dose and even helped us transition to a new prescription when our vet changed it. Professional and caring - exactly what we needed.",
+      name: "Robert & Linda Thompson",
       location: "Brighton, CO"
+    },
+    {
+      rating: 4,
+      comment: "Great service overall! Teagan walked our golden retriever Max while we were out of town for a week. Only wish they offered overnight stays, but the twice-daily visits worked well. Max was happy and tired each day.",
+      name: "The Patel Family",
+      location: "Reunion, CO"
+    },
+    {
+      rating: 5,
+      comment: "I have three cats and they're all pretty particular about strangers. Caroline won them over by the second visit. She even learned each of their quirks - Tiger likes his food warmed up and Mittens only drinks from the bathroom faucet. Highly recommend!",
+      name: "Amanda Rodriguez",
+      location: "Thornton, CO"
     }
   ];
 
