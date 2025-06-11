@@ -135,7 +135,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="hover:shadow-lg transition-shadow duration-300 hover-scale">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -146,20 +146,6 @@ const Index = () => {
               <CardContent>
                 <CardDescription className="text-center">
                   Regular check-ins, feeding, playtime, and companionship for your pets while you're away.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow duration-300 hover-scale">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-green-600" />
-                </div>
-                <CardTitle className="text-xl">Overnight Care</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-center">
-                  Sleep-over services to ensure your pets feel secure and maintain their routine.
                 </CardDescription>
               </CardContent>
             </Card>
