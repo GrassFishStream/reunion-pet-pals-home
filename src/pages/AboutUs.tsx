@@ -13,7 +13,7 @@ const AboutUs = () => {
         className="absolute inset-0"
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover',
+          backgroundSize: '130%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
