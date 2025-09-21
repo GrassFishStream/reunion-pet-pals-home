@@ -1,22 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import backgroundImage from "@/assets/background-image.jpg";
 
 const AboutUs = () => {
   const navigate = useNavigate();
 
   return (
     <main className="min-h-screen relative overflow-hidden">
-      {/* Background with sky blue and pastel polka dots */}
+      {/* Background with downloaded image */}
       <div 
-        className="absolute inset-0 bg-sky-400"
+        className="absolute inset-0"
         style={{
-          backgroundImage: `radial-gradient(circle at 20% 50%, rgba(255, 192, 203, 0.3) 2px, transparent 2px),
-                           radial-gradient(circle at 80% 20%, rgba(173, 216, 230, 0.3) 2px, transparent 2px),
-                           radial-gradient(circle at 40% 80%, rgba(255, 255, 224, 0.3) 2px, transparent 2px),
-                           radial-gradient(circle at 90% 90%, rgba(221, 160, 221, 0.3) 2px, transparent 2px),
-                           radial-gradient(circle at 10% 10%, rgba(176, 224, 230, 0.3) 2px, transparent 2px)`,
-          backgroundSize: '60px 60px, 80px 80px, 100px 100px, 70px 70px, 90px 90px'
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}
       />
       
