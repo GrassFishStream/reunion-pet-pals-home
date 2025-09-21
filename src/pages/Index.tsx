@@ -168,7 +168,14 @@ const Index = () => {
             Professional, loving pet care in the comfort of your own home. We treat your scaled, feathered, or fluffy family members like our own while you're away.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
+            <Button 
+              size="lg" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg"
+              onClick={() => {
+                const contactSection = document.querySelector('[data-contact-form]');
+                contactSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+            >
               Book Pet Care Now
             </Button>
             <Button variant="outline" size="lg" className="px-8 py-4 text-lg border-blue-600 text-blue-600 hover:bg-blue-50">
@@ -375,7 +382,7 @@ const Index = () => {
               </div>
             </div>
             
-            <Card>
+            <Card data-contact-form>
               <CardHeader>
                 <CardTitle>Get Your Free Consultation</CardTitle>
                 <CardDescription>Tell us about your pet and we'll create a perfect care plan</CardDescription>
