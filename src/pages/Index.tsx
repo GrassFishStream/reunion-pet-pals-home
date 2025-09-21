@@ -493,8 +493,6 @@ const Index = () => {
             Professional pet sitting and care services in Reunion, Colorado
           </p>
           <div className="flex justify-center gap-8 text-sm text-gray-400">
-            <span>Licensed & Insured</span>
-            <span>•</span>
             <span>Emergency Available</span>
             <span>•</span>
             <span>Local Team</span>
