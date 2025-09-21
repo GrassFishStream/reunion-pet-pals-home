@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import backgroundImage from "@/assets/background-image.jpg";
+import backgroundImage from "@/assets/pets-background.png";
 
 const AboutUs = () => {
   const navigate = useNavigate();
