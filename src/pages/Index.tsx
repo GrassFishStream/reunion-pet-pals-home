@@ -8,12 +8,14 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Star, Heart, Shield, Clock, MapPin, Mail, CalendarIcon } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import CommentForm from "@/components/CommentForm";
 
 const Index = () => {
+  const navigate = useNavigate();
   const [showCommentForm, setShowCommentForm] = useState(false);
   const [userComments, setUserComments] = useState<any[]>([]);
   const [formData, setFormData] = useState({
@@ -178,7 +180,12 @@ const Index = () => {
             >
               Book Pet Care Now
             </Button>
-            <Button variant="outline" size="lg" className="px-8 py-4 text-lg border-blue-600 text-blue-600 hover:bg-blue-50">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="px-8 py-4 text-lg border-blue-600 text-blue-600 hover:bg-blue-50"
+              onClick={() => navigate('/about')}
+            >
               Learn More About Us
             </Button>
           </div>
