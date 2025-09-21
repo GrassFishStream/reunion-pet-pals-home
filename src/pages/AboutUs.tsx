@@ -7,9 +7,9 @@ const AboutUs = () => {
 
   return (
     <main className="min-h-screen relative overflow-hidden">
-      {/* Background with fade blue to green gradient and pastel polka dots */}
+      {/* Background with sky blue and pastel polka dots */}
       <div 
-        className="absolute inset-0 bg-gradient-to-br from-blue-300 to-green-300"
+        className="absolute inset-0 bg-sky-400"
         style={{
           backgroundImage: `radial-gradient(circle at 20% 50%, rgba(255, 192, 203, 0.3) 2px, transparent 2px),
                            radial-gradient(circle at 80% 20%, rgba(173, 216, 230, 0.3) 2px, transparent 2px),
@@ -36,7 +36,7 @@ const AboutUs = () => {
       <div className="relative z-10 container mx-auto px-6 py-12 flex items-center justify-center min-h-[calc(100vh-120px)]">
         <div className="max-w-4xl text-center">
           <h1 className="text-6xl md:text-7xl font-bold font-dancing text-black mb-12 leading-tight">
-            Caroline and Tegan
+            Caroline and Teagan
           </h1>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-black/10">
