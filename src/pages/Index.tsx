@@ -259,7 +259,7 @@ const Index = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Caroline Clark</h3>
                 <p className="text-blue-600 font-medium mb-3">Pet Care Specialist</p>
                 <p className="text-gray-600 text-sm">
-                  4+ years experience with dogs, cats, reptiles, and amphibians. No Bugs.
+                  4+ years experience with cats, reptiles, amphibians, birds, and mammals. No Bugs.
                 </p>
               </CardContent>
             </Card>
