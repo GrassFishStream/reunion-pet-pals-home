@@ -13,6 +13,8 @@ import { toast } from "sonner";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import CommentForm from "@/components/CommentForm";
+import carolineProfile from "@/assets/caroline-new-profile.png";
+import teaganProfile from "@/assets/teagan-new-profile.png";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -265,7 +267,7 @@ const Index = () => {
               <CardContent className="pt-6 text-center">
                 <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
                   <img 
-                    src="/src/assets/caroline-new-profile.png"
+                    src={carolineProfile} 
                     alt="Caroline - Pet Care Specialist" 
                     className="w-full h-full object-cover"
                   />
@@ -282,7 +284,7 @@ const Index = () => {
               <CardContent className="pt-6 text-center">
                 <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
                   <img 
-                    src="/src/assets/teagan-new-profile.png" 
+                    src={teaganProfile} 
                     alt="Teagan - Dog Walking Expert" 
                     className="w-full h-full object-cover"
                   />
