@@ -309,7 +309,7 @@ const Index = () => {
                 Local Reunion Pet Care Experts
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                With over 8 years of experience caring for pets in the Reunion area, we understand the unique needs of Colorado pets and their families. Our bonded and insured team provides personalized care that keeps your pets happy and healthy.
+                With over 8 years of experience caring for pets in the Reunion area, we understand the unique needs of Colorado pets and their families. Our team provides personalized care that keeps your pets happy and healthy.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
