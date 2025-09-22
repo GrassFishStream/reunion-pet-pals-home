@@ -40,26 +40,6 @@ const AboutUs = () => {
             Caroline and Teagan
           </h1>
           
-          {/* Profile Photos */}
-          <div className="flex justify-center gap-8 mb-12">
-            <div className="text-center">
-              <img 
-                src={carolineProfile} 
-                alt="Caroline Clark" 
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover mx-auto mb-4 border-4 border-white/20"
-              />
-              <h3 className="text-2xl font-bold font-dancing text-black">Caroline</h3>
-            </div>
-            <div className="text-center">
-              <img 
-                src={teaganProfile} 
-                alt="Teagan Cuffe" 
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover mx-auto mb-4 border-4 border-white/20"
-              />
-              <h3 className="text-2xl font-bold font-dancing text-black">Teagan</h3>
-            </div>
-          </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-black/10">
             <p className="text-xl md:text-2xl font-bold font-dancing text-black leading-relaxed">
               Caroline and Teagan are 10 and up aged who specialize in personal and public pet care.
