@@ -276,7 +276,7 @@ const Index = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Teagan Cuffe</h3>
                 <p className="text-green-600 font-medium mb-3">Dog Walking Expert</p>
                 <p className="text-gray-600 text-sm">
-                  Amateur dog walker. Specializes in mid-energy breeds. No Reptiles.
+                  Amateur dog walker. 6+ years experience with dogs. Specializes in mid-energy breeds. No Reptiles.
                 </p>
               </CardContent>
             </Card>
