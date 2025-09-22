@@ -204,7 +204,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="hover:shadow-lg transition-shadow duration-300 hover-scale">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -229,6 +229,20 @@ const Index = () => {
               <CardContent>
                 <CardDescription className="text-center">
                   24/7 availability for urgent situations and immediate veterinary coordination.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow duration-300 hover-scale">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-8 h-8 text-pink-600" />
+                </div>
+                <CardTitle className="text-xl">Birthdays!</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-center">
+                  We celebrate your pet's birthday with presents and appropriate treats!
                 </CardDescription>
               </CardContent>
             </Card>
