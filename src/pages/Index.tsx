@@ -251,7 +251,7 @@ const Index = () => {
               <CardContent className="pt-6 text-center">
                 <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1485833077593-4278bba3f11f?w=96&h=96&fit=crop"
+                    src="/src/assets/caroline-profile.jpeg"
                     alt="Caroline - Pet Care Specialist" 
                     className="w-full h-full object-cover"
                   />
