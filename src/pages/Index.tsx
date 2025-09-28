@@ -33,7 +33,40 @@ const Index = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setShowCommentForm(true);
+
+    const contactMessage = `Pet Type: ${formData.petType}
+  Date: ${date}
+  Time: ${formData.time}
+  Worker: ${formData.worker}
+  Message: ${formData.message}`;
+
+    const contactUsPostData = {
+      name: formData.name,
+      address: "",
+      email: formData.email,
+      phone: formData.phone,
+      message: contactMessage
+    };
+
+    fetch('https://tcflexapi.azurewebsites.net/api/Email/539045832send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(contactUsPostData)
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        console.log('POST Response:', response);
+        setShowCommentForm(true);
+        //return response.json();
+      })
+      .catch(error => {
+        console.log('Error during POST request:', error);
+        alert('Error during POST request:', error);
+      });
   };
 
   const handleCommentSubmit = (comment: any) => {
@@ -492,7 +525,7 @@ const Index = () => {
                     rows={4}
                   />
                   <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
-                    Book Free Pet Care Today!
+                    Book Pet Care Today!
                   </Button>
                 </form>
               </CardContent>
