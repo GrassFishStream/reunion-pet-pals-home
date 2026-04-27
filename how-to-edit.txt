@@ -1,0 +1,5 @@
+Make change in main branch
+Run: npm run build
+Copy dist folder to other location
+Checkout gh-pages branch
+Copy dist folder from other location to dist in branch
