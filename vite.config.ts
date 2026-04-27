@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     // This changes the output directory from 'dist' to 'docs'
-    outDir: 'docs',
+    //outDir: 'docs',
     
     // Optional: Clears the 'docs' folder before building
     emptyOutDir: true, 
