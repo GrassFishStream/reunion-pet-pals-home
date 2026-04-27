@@ -417,7 +417,7 @@ const Index = () => {
               </p>
               
               <div className="space-y-4">
-                <div className="flex items-center gap-4">
+                {/*<div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                     <Mail className="w-6 h-6 text-green-600" />
                   </div>
@@ -425,7 +425,7 @@ const Index = () => {
                     <div className="font-semibold text-gray-900">reunionpetsitters@gmail.com</div>
                     <div className="text-gray-600">Quick response guaranteed</div>
                   </div>
-                </div>
+                </div>*/}
                 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
@@ -437,12 +437,12 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            
-            <div>
+
+            <div style={{fontSize: 'xx-large', color: 'blue'}}>
               We're not currently accepting new customers, but plan to reopen sign-ups Summer 2026. Sorry for the inconvenience!
             </div>
-
-            <Card data-contact-form style="display: none;">
+            
+            <Card data-contact-form style={{display: 'none'}}>
               <CardHeader>
                 <CardTitle>Get Your Free Consultation</CardTitle>
                 <CardDescription>Tell us about your pet and we'll create a perfect care plan</CardDescription>
