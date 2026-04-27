@@ -1,5 +1,4 @@
 Make change in main branch
-Run: npm run build
-Copy dist folder to other location
-Checkout gh-pages branch
-Copy dist folder from other location to dist in branch
+Run: npm run predeploy
+Run: npm run deploy
+It should create a change to the gh-pages branch which will update GitHub Pages
