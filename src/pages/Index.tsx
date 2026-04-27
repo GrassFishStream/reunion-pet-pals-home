@@ -438,7 +438,11 @@ const Index = () => {
               </div>
             </div>
             
-            <Card data-contact-form>
+            <div>
+              We're not currently accepting new customers, but plan to reopen sign-ups Summer 2026. Sorry for the inconvenience!
+            </div>
+
+            <Card data-contact-form style="display: none;">
               <CardHeader>
                 <CardTitle>Get Your Free Consultation</CardTitle>
                 <CardDescription>Tell us about your pet and we'll create a perfect care plan</CardDescription>
@@ -530,6 +534,7 @@ const Index = () => {
                 </form>
               </CardContent>
             </Card>
+
           </div>
         </div>
       </section>
