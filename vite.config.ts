@@ -19,4 +19,11 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // This changes the output directory from 'dist' to 'docs'
+    outDir: 'docs',
+    
+    // Optional: Clears the 'docs' folder before building
+    emptyOutDir: true, 
+  }
 }));
